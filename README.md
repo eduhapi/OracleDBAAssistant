@@ -1,10 +1,10 @@
 To set up and use the `OracleDBAAssistant` project, which is designed to manage day-to-day repetitive DBA tasks and run commands, follow these steps:
 ## Screenshot of the Running Project
 
-![Screenshot](docs/dba-1.png)
-![Screenshot](docs/dba-2.png)
-![Screenshot](docs/dba-3.png)
-![Screenshot](docs/dba-4.png)
+![Screenshot](docs/dba-1.PNG)
+![Screenshot](docs/dba-2.PNG)
+![Screenshot](docs/dba-3.PNG)
+![Screenshot](docs/dba-4.PNG)
 
 ### Overview
 
