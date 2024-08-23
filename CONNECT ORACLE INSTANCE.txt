@@ -1,43 +1,37 @@
-The form you've provided is used to capture Oracle database instance details, which are necessary to connect to and interact with an Oracle database from your Django application. For an Oracle Express Edition (XE) database installed on Windows, here's what each field represents:
+You need to captureOracle database instance details, which are necessary to connect to and interact with an Oracle database from your Django application. For an Oracle Express Edition (XE) database installed on Windows, here's what each field represents:
+ Fields in the Form
 
-### Fields in the Form
+1. Instance Name (`name`)
+   - Description: The name of the Oracle instance. In Oracle XE, this is typically referred to as the "Service Name" or "SID" (System Identifier). It is used to uniquely identify the Oracle database instance.
+   - Example: `XE`
 
-1. **Instance Name (`name`)**
-   - **Description**: The name of the Oracle instance. In Oracle XE, this is typically referred to as the "Service Name" or "SID" (System Identifier). It is used to uniquely identify the Oracle database instance.
-   - **Example**: `XE`
-
-2. **DSN (Data Source Name) (`dsn`)**
-   - **Description**: The DSN is a string that specifies the database to connect to. For Oracle, this usually includes the database host, port, and service name or SID. In Oracle XE, it often looks like `localhost:1521/XE` where:
+2. DSN (Data Source Name) (`dsn`)
+   - Description: The DSN is a string that specifies the database to connect to. For Oracle, this usually includes the database host, port, and service name or SID. In Oracle XE, it often looks like `localhost:1521/XE` where:
      - `localhost` is the hostname (or IP address) of the database server.
      - `1521` is the default port number Oracle listens on.
      - `XE` is the service name or SID.
-   - **Example**: `localhost:1521/XE`
+   - Example: `localhost:1521/XE`
 
-3. **Username (`username`)**
-   - **Description**: The username for connecting to the Oracle database. This is the Oracle user account that has access to the database and can perform operations.
-   - **Example**: `system` or `scott`
+3. Username (`username`)
+   - Description: The username for connecting to the Oracle database. This is the Oracle user account that has access to the database and can perform operations.
+   - Example: `system` or `scott`
 
-4. **Password (`password`)**
-   - **Description**: The password associated with the username. This is used for authentication when connecting to the Oracle database.
-   - **Example**: `your_password`
-
-### Example
+4. Password (`password`)
+   - Description: The password associated with the username. This is used for authentication when connecting to the Oracle database.
+   - Example: `your_password`
+ FULL Example
 
 For an Oracle Express Edition (XE) database installed on Windows with default settings, you might enter the following details:
 
-- **Instance Name**: `XE`
-- **DSN**: `localhost:1521/XE`
-- **Username**: `system`
-- **Password**: `oracle`
+- Instance Name: `XE`
+- DSN: `localhost:1521/XE`
+- Username: `system`
+- Password: `oracle`
 
-### Additional Considerations
+1. Oracle Instant Client: Ensure that you have the Oracle Instant Client installed and properly configured on your server where Django is running. This is needed for Python to connect to the Oracle database.
 
-1. **Oracle Instant Client**: Ensure that you have the Oracle Instant Client installed and properly configured on your server where Django is running. This is needed for Python to connect to the Oracle database.
+2. Network Configuration: Ensure that your Oracle database is properly configured to accept connections on the network, and that any firewalls are configured to allow traffic on the port used by Oracle (default is 1521).
 
-2. **Network Configuration**: Ensure that your Oracle database is properly configured to accept connections on the network, and that any firewalls are configured to allow traffic on the port used by Oracle (default is 1521).
+3. Environment Variables: If you encounter issues connecting, make sure that the `ORACLE_HOME` and `TNS_ADMIN` environment variables are correctly set, as these might affect your connection configuration.
 
-3. **Environment Variables**: If you encounter issues connecting, make sure that the `ORACLE_HOME` and `TNS_ADMIN` environment variables are correctly set, as these might affect your connection configuration.
-
-4. **Python Libraries**: Ensure that the Python library `cx_Oracle` is installed and properly configured to connect to Oracle databases.
-
-This form allows users to provide the necessary details to connect to an Oracle database instance, facilitating database administration tasks directly from your Django application.
+4. Python Libraries: Ensure that the Python library `cx_Oracle` is installed and properly configured to connect to Oracle databases.
