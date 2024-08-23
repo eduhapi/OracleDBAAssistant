@@ -1,7 +1,10 @@
 # OracleDBAAssistant
 Use the master branch.
 To set up and use the `OracleDBAAssistant` project, which is designed to manage day-to-day repetitive DBA tasks and run commands, follow these steps:
-
+![Screenshot](docs/dba-1.png)
+![Screenshot](docs/dba-2.png)
+![Screenshot](docs/dba-3.png)
+![Screenshot](docs/dba-4.png)
 ### Overview
 
 `OracleDBAAssistant` is a Django web application that helps automate and manage routine DBA tasks and execute commands related to Oracle databases. 
