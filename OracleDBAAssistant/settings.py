@@ -32,11 +32,11 @@ LOGIN_REDIRECT_URL = '/dashboard/'  # Change this to your desired redirect URL a
 LOGOUT_REDIRECT_URL = 'login'
 # settings.py
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'lon108.truehost.cloud'
+EMAIL_HOST = 'host.host.cloud'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'info2@eastakiba.co.ke'
-EMAIL_HOST_PASSWORD = '(Zdp(ulv]Ho['
+EMAIL_HOST_USER = 'email@domain.com'
+EMAIL_HOST_PASSWORD = 'password'
 
 
 
