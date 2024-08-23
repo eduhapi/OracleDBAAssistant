@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}Active Sessions{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1>Active Sessions</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>SID</th>
+                <th>Serial#</th>
+                <th>Username</th>
+                <th>Status</th>
+                <th>Program</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for session in sessions %}
+                <tr>
+                    <td>{{ session.0 }}</td>
+                    <td>{{ session.1 }}</td>
+                    <td>{{ session.2 }}</td>
+                    <td>{{ session.3 }}</td>
+                    <td>{{ session.4 }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="{% url 'dashboard' %}" class="btn btn-primary mt-4">Back to Dashboard</a>
+</div>
+{% endblock %}

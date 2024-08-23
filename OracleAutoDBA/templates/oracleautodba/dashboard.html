@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+    <div class="container mt-4">
+        <h2>Dashboard</h2>
+        
+        {% if instance %}
+            <h3>Connected to: {{ instance.name }}</h3>
+            <p>DSN: {{ instance.dsn }}</p>
+            <p>Username: {{ instance.username }}</p>
+            <!-- Add more instance details or stats as needed -->
+            
+            <h3>Performance Metrics</h3>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Metric</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for metric, value in metrics.items %}
+                        <tr>
+                            <td>{{ metric }}</td>
+                            <td>{{ value }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <p>No Oracle instance found. Please enter the instance details again.</p>
+        {% endif %}
+
+        <a href="{% url 'index' %}" class="btn btn-primary">Go Back</a>
+    </div>
+{% endblock %}

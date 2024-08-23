@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}DBA Users{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1>DBA Users</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Status</th>
+                <th>Default Tablespace</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+                <tr>
+                    <td>{{ user.0 }}</td>
+                    <td>{{ user.1 }}</td>
+                    <td>{{ user.2 }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="{% url 'dashboard' %}" class="btn btn-primary mt-4">Back to Dashboard</a>
+</div>
+{% endblock %}

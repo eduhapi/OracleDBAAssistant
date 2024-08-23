@@ -1,0 +1,19 @@
+<header class="bg-primary text-white text-center py-3">
+    <h1>Welcome to Oracle DBA Assistant</h1>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="{% url 'dashboard' %}">Dashboard</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'tablespace_usage' %}">Tablespace Usage</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'active_sessions' %}">Active Sessions</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'dba_users' %}">DBA Users</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
